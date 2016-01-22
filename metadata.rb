@@ -1,0 +1,7 @@
+name             'strongswanaws'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures strongswanaws'
+long_description 'Installs/Configures strongswanaws'
+version          '0.1.0'
