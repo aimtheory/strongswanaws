@@ -1,0 +1,22 @@
+# connection_name.conf - strongSwan IPsec configuration file
+
+conn <%= @connection_name %>
+    # Generics
+    authby=secret
+    dpddelay=10
+    dpdtimeout=30
+    dpdaction=restart
+    esp=aes128-sha1-modp1024!
+    ike=aes128-sha1-modp1024!
+    ikelifetime=28800s
+    lifetime=1h
+    keyexchange=ikev1
+    keyingtries=%forever
+    rekey=yes
+    # Specifics
+    left=<%= @ip_address %>            # Local private ip
+    leftsubnet=<%= @local_network %>   # Local VPC Subnet
+    leftid=<%= @connection_name %>
+    right=<%= @remote_gateway %>       # Remote Tunnel IP
+    rightsubnet=<%= @remote_network %> # Remote VPC Subnet
+    type=tunnel

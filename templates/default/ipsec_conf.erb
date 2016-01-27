@@ -1,0 +1,8 @@
+# ipsec.conf - strongSwan IPsec configuration file
+
+config setup
+<%= '    charondebug="ike 3, knl 3, cfg 2"' if @debug %>
+
+# IPSec connections are included from a directory
+# and populated by a Chef template
+include /etc/ipsec.connections/*.conf
