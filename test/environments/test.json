@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "description": "Test Chef Environment",
+  "cookbook_versions": {
+
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "strongswanaws": {
+      "debug": true,
+      "tunnels": [
+        {
+          "name": "tunnel-to-other-vpc",
+          "local_network": "10.10.0.0/16",
+          "remote_network": "10.11.0.0/16",
+          "tunnel_ip": "1.2.3.4"
+        }
+      ]
+    }
+  },
+  "override_attributes": {
+
+  }
+}

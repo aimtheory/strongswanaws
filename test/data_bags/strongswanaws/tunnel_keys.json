@@ -1,0 +1,12 @@
+{
+  "id": "tunnel_keys",
+  "key_configs": [
+    {
+      "name": "tunnel-to-other-vpc",
+      "psk": "Ep53A1ZqY6f.KWO90LABLzfRZyf62GyM",
+      "source_ips": [
+        "1.2.3.4"
+      ]
+    }
+  ]
+}
