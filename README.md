@@ -1,14 +1,28 @@
 # StrongSwan AWS Cookbook
 
+## Contents
+
+* [Summary](#summary)
+* [Requirements](#requirements)
+* [Supported Platforms](#supported-platforms)
+* [Cookbook Dependencies](#cookbook-dependencies)
+* [Attributes](#attributes)
+* [Data Bags](#data-bags)
+* [Recipes](#recipes)
+* [Usage](#usage)
+* [Resources](#resources)
+
+
+## Summary
 The StrongSwan AWS Cookbook creates an AWS-compatible IPSec tunnel on a node.
 
-# Requirements
+## Requirements
 
 This cookbook works with [StrongSwan](https://www.strongswan.org/), an open-source IPSec-based VPN solution.
 
 It has been tested with StrongSwan `5.1.2`, as packaged for Ubuntu.
 
-# Supported Platforms
+## Supported Platforms
 
 <table>
   <tr>
@@ -21,11 +35,11 @@ It has been tested with StrongSwan `5.1.2`, as packaged for Ubuntu.
   </tr>
 </table>
 
-# Cookbook Dependencies
+## Cookbook Dependencies
 
 This cookbook does not depend on any other cookbooks.
 
-# Attributes
+## Attributes
 
 This cookbook uses the following attributes.
 
@@ -79,7 +93,7 @@ These attributes can be set as below.
 }
 ```
 
-# Data Bags
+## Data Bags
 
 This cookbook makes use of a data bag named `strongswanaws`.
 
@@ -104,7 +118,7 @@ The item `tunnel_keys` should look as shown below.
 
 There may be zero or more tunnels in the `tunnel_keys` list.
 
-# Recipes
+## Recipes
 
 This cookbook contains the following recipes.
 
@@ -120,7 +134,7 @@ This cookbook contains the following recipes.
   * Writes PSK's to the secrets file
   * Configures tunnels to which StrongSwan will connect
 
-# Usage
+## Usage
 
 Include the `server` recipe to only install StrongSwan and set system limits.
 
@@ -139,7 +153,7 @@ Include both `server` and `tunnels` recipes to configure StrongSwan to establish
 ]
 ```
 
-# Resources
+## Resources
 
 `strongswanaws::connection` - Add an IPSec session for StrongSwan to establish
 
@@ -162,4 +176,3 @@ strongswanaws_connection 'remote_tunnel' do
   startup_operation 'start'
 end
 ```
-
