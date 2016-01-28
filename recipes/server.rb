@@ -1,4 +1,3 @@
-#
 # Cookbook Name:: strongswanaws
 # Recipe:: server
 #
