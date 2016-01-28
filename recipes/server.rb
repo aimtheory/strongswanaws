@@ -16,7 +16,7 @@ service 'procps' do
 end
 
 file '/etc/sysctl.d/60-strongswan.conf' do
-  content 'net.ipv4.ip_forward=1'
+  content "# Uncomment the below to enable ip forwarding\nnet.ipv4.ip_forward=1\n"
   mode '0644'
   owner 'root'
   group 'root'
