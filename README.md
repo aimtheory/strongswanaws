@@ -24,16 +24,13 @@ It has been tested with StrongSwan `5.1.2`, as packaged for Ubuntu.
 
 ## Supported Platforms
 
-<table>
-  <tr>
-    <th>Distribution</th>
-    <th>Version</th>
-  </tr>
-  <tr>
-    <td>Ubuntu</td>
-    <td>14.04</td>
-  </tr>
-</table>
+```
+.------------------------.
+| Distribution | Version |
+|------------------------|
+| Ubuntu       | 14.04   |
+'------------------------'
+```
 
 ## Cookbook Dependencies
 
