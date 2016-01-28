@@ -7,5 +7,5 @@ description      'Installs/Configures StrongSwan'
 long_description 'Installs and configures StrongSwan to connect with an AWS VPN'
 source_url       'https://github.com/flite/strongswanaws'
 supports         'ubuntu', '= 14.04'
-version          '0.1.7'
+version          '0.1.8'
 
