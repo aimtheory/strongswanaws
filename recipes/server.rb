@@ -15,18 +15,13 @@ service 'procps' do
   action :nothing
 end
 
-@sysctl_ip_fwd = '
-# Uncomment the next line to enable packet forwarding for IPv4
-net.ipv4.ip_forward=1
-'
-
 file '/etc/sysctl.d/60-strongswan.conf' do
-  content @sysctl_ip_fwd
+  content 'net.ipv4.ip_forward=1'
   mode '0644'
   owner 'root'
   group 'root'
   # sysctl variables should be re-loaded after a change
-  notifies :start, 'service[procps]', :immediately
+  notifies :restart, 'service[procps]', :immediately
 end
 
 # Grouping gateway configs together is more organized
