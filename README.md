@@ -40,26 +40,14 @@ This cookbook does not depend on any other cookbooks.
 
 This cookbook uses the following attributes.
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['awsstrongswan']['debug']</tt></td>
-    <td>Boolean</td>
-    <td>Cause charon to log debug information</td>
-    <td><tt>true</tt></td>
-  </tr>
-  <tr>
-    <td><tt>['awsstrongswan']['tunnels']</tt></td>
-    <td>Array</td>
-    <td>Tunnels to which to connect</td>
-    <td>empty<tt>[]</tt></td>
-  </tr>
-</table>
+```
+.-------------------------------------------------------------------------------------------.
+| Key                          | Type    | Description                           | Default  |
+|-------------------------------------------------------------------------------------------|
+| ['awsstrongswan']['debug']   | Boolean | Cause charon to log debug information | true     |
+| ['awsstrongswan']['tunnels'] | Array   | Tunnels to which to connect           | empty [] |
+'-------------------------------------------------------------------------------------------'
+```
 
 These attributes can be set as below.
 
