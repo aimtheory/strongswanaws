@@ -1,6 +1,7 @@
 name             'strongswanaws'
 maintainer       'Christopher Nielsen'
 maintainer_email 'christopher.nielsen@gmail.com'
+license          'https://opensource.org/licenses/BSD-3-Clause'
 description      'Installs/Configures strongswanaws'
 long_description 'Installs/Configures strongswanaws'
 version          '0.1.3'
