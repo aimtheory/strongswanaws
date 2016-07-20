@@ -67,6 +67,6 @@ template '/etc/ipsec.conf' do
   owner 'root'
   group 'root'
   mode '0644'
-  variables('debug' => node['strongswanaws']['debug'])
+  variables('debug' => node['awsstrongswan']['debug'])
   notifies :restart, 'service[strongswan]', :delayed
 end
