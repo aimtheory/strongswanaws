@@ -14,7 +14,6 @@ action :create do
   converge_by("Creating #{new_resource.name}.conf connection config") do
     template "/etc/ipsec.connections/#{new_resource.name}.conf" do
       source 'connection.erb'
-      cookbook 'strongswanaws'
       owner 'root'
       group 'root'
       mode '0644'
